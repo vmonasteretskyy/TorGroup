@@ -106,7 +106,7 @@ h1, h2, h3, h4, h5, h6 { font-family: "Sansita One", sans-serif; }
 
 @media only screen and (min-width: 1401px) { .container { max-width: 1320px; } }
 
-.header { padding: 30px 0; }
+.header { padding: 30px 0; overflow-x: hidden; overflow-y: visible; }
 
 .header__nav { position: relative; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-items: center; -ms-flex-align: center; align-items: center; font-size: 12px; line-height: 14px; letter-spacing: -0.03em; color: var(--color-header-font); }
 
@@ -144,8 +144,8 @@ h1, h2, h3, h4, h5, h6 { font-family: "Sansita One", sans-serif; }
   .header__contacts .email, .header__contacts .phone { display: block; }
   .header__contacts .email > svg, .header__contacts .phone > svg { width: 10px; margin-right: 8px; }
   .header__contacts .phone { margin: 0 0 20px; }
-  .menu { position: absolute; top: 100%; right: -15px; text-align: center; padding: 20px 0 40px; width: 260px; display: block; background-color: var(--color-bg); opacity: 0; transform: translateX(100%); -webkit-transform: translateX(100%); -moz-transform: translateX(100%); -ms-transform: translateX(100%); -o-transform: translateX(100%); transition: 0.5s ease; -webkit-transition: 0.5s ease; -moz-transition: 0.5s ease; -ms-transition: 0.5s ease; -o-transition: 0.5s ease; max-height: calc(100vh - 20px); overflow-y: auto; z-index: 1; }
-  .menu.open { opacity: 1; transform: translateX(0); -webkit-transform: translateX(0); -moz-transform: translateX(0); -ms-transform: translateX(0); -o-transform: translateX(0); }
+  .menu { position: absolute; top: 100%; right: -15px; text-align: center; padding: 20px 0 40px; width: 260px; display: block; background-color: var(--color-bg); opacity: 0; transform: translateX(100%); -webkit-transform: translateX(100%); -moz-transform: translateX(100%); -ms-transform: translateX(100%); -o-transform: translateX(100%); transition: 0.5s ease; -webkit-transition: 0.5s ease; -moz-transition: 0.5s ease; -ms-transition: 0.5s ease; -o-transition: 0.5s ease; max-height: calc(100vh - 20px); overflow-y: auto; z-index: 1; visibility: hidden; }
+  .menu.open { opacity: 1; visibility: visible; transform: translateX(0); -webkit-transform: translateX(0); -moz-transform: translateX(0); -ms-transform: translateX(0); -o-transform: translateX(0); }
   .menu__btn { display: block; position: relative; height: 24px; width: 24px; background: transparent; cursor: pointer; padding: 0; z-index: 100; }
   .menu__btn > span { display: block; position: absolute; top: 50%; margin-top: -1.5px; left: 0; width: 100%; height: 3px; background-color: var(--color-header-font); }
   .menu__btn > span::after, .menu__btn > span::before { content: ""; display: block; position: absolute; top: 50%; margin-top: -2px; left: 0; width: 100%; height: 3px; background-color: var(--color-header-font); transition: -webkit-transform 0.4s; transition: transform 0.4s; transition: transform 0.4s, -webkit-transform 0.4s; -webkit-transition: transform 0.4s; -moz-transition: transform 0.4s; -ms-transition: transform 0.4s; -o-transition: transform 0.4s; }

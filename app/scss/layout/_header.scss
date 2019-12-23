@@ -1,5 +1,7 @@
 .header {
 	padding: 30px 0;
+	overflow-x: hidden;
+	overflow-y: visible;
 	&__nav {
 		position: relative;
 		display: flex;
@@ -126,8 +128,10 @@
 		max-height: calc(100vh - 20px);
 		overflow-y: auto;
 		z-index: 1;
+		visibility: hidden;
 		&.open {
 			opacity: 1;
+			visibility: visible;
 			@include transform(translateX(0));
 		}
 		&__btn {
