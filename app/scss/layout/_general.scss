@@ -1,0 +1,105 @@
+/*
+================================================================================
+|                                 GENERAL STYLE                                |
+================================================================================
+*/
+
+body {
+	margin: 0;
+	position: relative;
+	background-color: var(--color-bg);
+	height: 100%;
+	font-family: $base-font-family;
+	font-size: $base-fs;
+	line-height: $base-line-height;
+	font-weight: 400;
+	color: var(--color-font);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	overflow-x: hidden;
+	@include transition(0.3s);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $second-font-family;
+}
+
+.section {
+	margin-bottom: 200px;
+}
+
+.wow {
+	visibility: hidden;
+}
+
+.overflow-hidden {
+	overflow: hidden;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left !important;
+}
+
+.text-right {
+	text-align: right !important;
+}
+
+.title-section {
+	font-family: $second-font-family;
+	color: var(--color-title);
+	font-size: $font-size-h1;
+	line-height: $line-height-h1;
+	font-weight: normal;
+	text-align: center;
+}
+
+@media only screen and (max-width: 1199.8px) {
+	body {
+		font-size: $base-fs - 4px;
+	}
+
+	.section {
+		margin-bottom: 120px;
+	}
+
+	.title-section {
+		font-size: $font-size-h1 - 12px;
+	}
+}
+
+@media only screen and (max-width: 991.8px) {
+	.section {
+		margin-bottom: 60px;
+	}
+
+	.title-section {
+		font-size: $font-size-h3 + 8px;
+	}
+}
+
+@media only screen and (max-width: 767.8px) {
+	.title-section {
+		font-size: $font-size-h3;
+	}
+}
+
+@media only screen and (max-width: 575.8px) {
+	.title-section {
+		font-size: $font-size-h3 - 8px;
+	}
+}
+
+@media only screen and (min-width: 1401px) {
+	.container {
+		max-width: 1320px;
+	}
+}

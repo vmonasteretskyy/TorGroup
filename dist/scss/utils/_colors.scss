@@ -1,0 +1,47 @@
+:root {
+	--color-font: #393939;
+	--color-font-light: rgba(57, 57, 57, 0.7);
+
+	--color-title-dark: ;
+	--color-title: #393939;
+	--color-title-light: ;
+
+	--color-bg: #ffffff;
+	--color-bg-second: #e3e3e3;
+
+	--color-btn-hover: #fff;
+
+	--color-header-font: #808080;
+	--color-header-font-hover: #393939;
+
+	--color-switch-bg: #92d4e5;
+	--color-switch-bg-second: #ffc107;
+	--color-switch-border: #dcdcdc;
+
+	--color-input: #c7c7c7;
+	--color-label: rgba(82, 82, 82, 0.7);
+}
+
+[data-theme="dark"] {
+	--color-font: #b4b4b4;
+	--color-font-light: #f7f7f7;
+
+	--color-title-dark: ;
+	--color-title: #fff;
+	--color-title-light: ;
+
+	--color-bg: #2c2c2c;
+	--color-bg-second: #151515;
+
+	--color-btn-hover: #2c2c2c;
+
+	--color-header-font: #959595;
+	--color-header-font-hover: #fff;
+
+	--color-switch-bg: #2b5560;
+	--color-switch-bg-second: #b0bec5;
+	--color-switch-border: #717171;
+
+	--color-input: #5a5a5a;
+	--color-label: rgba(255, 255, 255, 0.7);
+}

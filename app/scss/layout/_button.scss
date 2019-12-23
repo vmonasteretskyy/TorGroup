@@ -1,0 +1,62 @@
+.btn {
+	@extend %center-center;
+	width: 180px;
+	height: 40px;
+	font-size: $base-fs;
+	line-height: $base-line-height;
+	text-transform: uppercase;
+	@include radius(0);
+	@include transition(0.3s);
+}
+
+.btn-blue {
+	background-color: $btn-blue;
+	color: $text-white;
+	&:hover {
+		color: $text-white;
+		animation: btn-animate 0.4s linear;
+	}
+}
+
+.btn-border-blue {
+	position: relative;
+	border: 1.5px solid $btn-blue;
+	color: $text-blue;
+	&::before {
+		content: "";
+		width: 0;
+		height: inherit;
+		background-color: $btn-blue;
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: -1;
+		@include transition(width 0.2s);
+	}
+	&:hover {
+		&::before {
+			width: 100%;
+		}
+		color: var(--color-btn-hover);
+		animation: btn-animate 0.5s 0.3s linear;
+	}
+}
+
+@keyframes btn-animate {
+	0% {
+		@include transform(scale(1));
+	}
+
+	50% {
+		@include transform(scale(0.84));
+	}
+	100% {
+		@include transform(scale(1));
+	}
+}
+
+@media only screen and (max-width: 1199.8px) {
+	.btn {
+		font-size: $base-fs - 2px;
+	}
+}

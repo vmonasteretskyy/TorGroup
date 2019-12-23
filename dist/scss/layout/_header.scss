@@ -1,0 +1,193 @@
+.header {
+	padding: 30px 0;
+	&__nav {
+		position: relative;
+		display: flex;
+		align-items: center;
+		font-size: $base-fs - 6px;
+		line-height: 14px;
+		letter-spacing: -0.03em;
+		color: var(--color-header-font);
+	}
+	&__contacts {
+		margin-left: auto;
+		display: flex;
+		align-items: center;
+		.email,
+		.phone {
+			font-weight: 500;
+			> svg {
+				width: 10px;
+				margin-right: 8px;
+				fill: var(--color-header-font);
+			}
+		}
+		.phone {
+			margin: 0 30px;
+		}
+	}
+}
+
+.menu {
+	display: flex;
+	align-items: center;
+	text-transform: uppercase;
+	width: 100%;
+	&__btn {
+		display: none;
+	}
+	&__item {
+		position: relative;
+		margin-right: 30px;
+		&:last-of-type {
+			margin-right: 0;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: -2px;
+			width: 0;
+			height: 1.3px;
+			background-color: var(--color-header-font-hover);
+			@include transition(width 0.3s);
+		}
+		&:hover,
+		&.active {
+			color: var(--color-header-font-hover);
+			&::after {
+				width: 30px;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1199.8px) {
+	.header {
+		padding: 20px 0;
+		&__nav {
+			font-size: $base-fs - 7px;
+		}
+		&__contacts {
+			.email,
+			.phone {
+				> svg {
+					margin-right: 6px;
+				}
+			}
+			.phone {
+				margin: 0 20px;
+			}
+		}
+	}
+
+	.menu {
+		&__item {
+			margin-right: 24px;
+		}
+	}
+}
+
+@media only screen and (max-width: 991.8px) {
+	.header {
+		padding: 16px 0;
+		&__nav {
+			justify-content: flex-end;
+			font-size: $base-fs - 6px;
+		}
+		&__contacts {
+			margin-left: 0;
+			display: block;
+			.email,
+			.phone {
+				display: block;
+				> svg {
+					width: 10px;
+					margin-right: 8px;
+				}
+			}
+			.phone {
+				margin: 0 0 20px;
+			}
+		}
+	}
+	.menu {
+		position: absolute;
+		top: 100%;
+		right: -15px;
+		text-align: center;
+		padding: 20px 0 40px;
+		width: 260px;
+		display: block;
+		background-color: var(--color-bg);
+		opacity: 0;
+		@include transform(translateX(100%));
+		@include transition(0.5s ease);
+		max-height: calc(100vh - 20px);
+		overflow-y: auto;
+		z-index: 1;
+		&.open {
+			opacity: 1;
+			@include transform(translateX(0));
+		}
+		&__btn {
+			display: block;
+			position: relative;
+			height: 24px;
+			width: 24px;
+			background: transparent;
+			cursor: pointer;
+			padding: 0;
+			z-index: 100;
+			> span {
+				display: block;
+				position: absolute;
+				top: 50%;
+				margin-top: -1.5px;
+				left: 0;
+				width: 100%;
+				height: 3px;
+				background-color: var(--color-header-font);
+				&::after,
+				&::before {
+					content: "";
+					display: block;
+					position: absolute;
+					top: 50%;
+					margin-top: -2px;
+					left: 0;
+					width: 100%;
+					height: 3px;
+					background-color: var(--color-header-font);
+					@include transition(transform 0.4s);
+				}
+				&::after {
+					@include transform(translateY(-6px));
+				}
+				&::before {
+					@include transform(translateY(7px));
+				}
+			}
+			&.active {
+				> span {
+					height: 0;
+					&::after {
+						@include transform(rotate(-42deg));
+					}
+					&::before {
+						@include transform(rotate(42deg));
+					}
+				}
+			}
+		}
+		&__item {
+			margin-right: 0;
+			margin-bottom: 20px;
+			&::after {
+				left: 50%;
+				margin-left: -15px;
+				bottom: -4px;
+			}
+		}
+	}
+}

@@ -1,0 +1,147 @@
+.slider {
+	max-width: 1700px;
+	margin-left: auto;
+	&__item {
+		margin-right: 50px;
+		&:focus {
+			outline: none;
+		}
+	}
+	&__image {
+		width: 100%;
+		height: 350px;
+		@include radius(5px);
+		box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+		overflow: hidden;
+		margin-bottom: 25px;
+		> img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__title {
+		font-family: $base-font-family;
+		font-size: $base-fs + 6px;
+		line-height: $base-line-height;
+		font-weight: 500;
+		letter-spacing: -0.03em;
+		text-transform: uppercase;
+		color: var(--color-title);
+		margin-bottom: 12px;
+	}
+	&__btn {
+		width: 120px;
+		height: 30px;
+	}
+	.slick-list {
+		padding: 0 18% 0 75px;
+	}
+}
+
+@media only screen and (max-width: 1400px) {
+	.slider {
+		&__item {
+			margin-right: 46px;
+		}
+		&__image {
+			height: 332px;
+		}
+	}
+}
+
+@media only screen and (max-width: 1199.8px) {
+	.slider {
+		&__item {
+			margin-right: 30px;
+		}
+		&__image {
+			height: 235px;
+		}
+		&__title {
+			font-size: $base-fs;
+		}
+		&__btn {
+			font-size: $base-fs - 4px;
+		}
+	}
+}
+
+@media only screen and (max-width: 991.8px) {
+	.slider {
+		&__image {
+			height: 206px;
+		}
+		&__title {
+			font-size: $base-fs - 2px;
+		}
+		.slick-list {
+			padding: 0 10% 0 45px;
+		}
+	}
+}
+
+@media only screen and (max-width: 767.8px) {
+	.slider {
+		&__image {
+			height: 190px;
+		}
+		&__title {
+			font-size: $base-fs - 4px;
+		}
+		.slick-list {
+			padding: 0 10% 0 25px;
+		}
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.slider {
+		&__item {
+			margin-right: 20px;
+		}
+		&__image {
+			height: 164px;
+		}
+	}
+}
+
+@media only screen and (max-width: 550px) {
+	.slider {
+		&__image {
+			height: 140px;
+		}
+	}
+}
+
+@media only screen and (max-width: 520px) {
+	.slider {
+		&__image {
+			height: 128px;
+		}
+	}
+}
+
+@media only screen and (max-width: 479px) {
+	.slider {
+		&__image {
+			height: 250px;
+		}
+	}
+}
+
+@media only screen and (max-width: 375px) {
+	.slider {
+		&__image {
+			height: 205px;
+		}
+	}
+}
+
+@media only screen and (max-width: 350px) {
+	.slider {
+		&__image {
+			height: 170px;
+		}
+	}
+}
