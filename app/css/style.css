@@ -106,7 +106,7 @@ h1, h2, h3, h4, h5, h6 { font-family: "Sansita One", sans-serif; }
 
 @media only screen and (min-width: 1401px) { .container { max-width: 1320px; } }
 
-.header { padding: 30px 0; overflow-x: hidden; overflow-y: visible; }
+.header { padding: 30px 0; }
 
 .header__nav { position: relative; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-items: center; -ms-flex-align: center; align-items: center; font-size: 12px; line-height: 14px; letter-spacing: -0.03em; color: var(--color-header-font); }
 
