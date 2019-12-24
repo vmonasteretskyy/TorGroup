@@ -324,7 +324,7 @@ h1, h2, h3, h4, h5, h6 { font-family: "Sansita One", sans-serif; }
 
 .first-screen .container, .first-screen .row { height: inherit; }
 
-.first-screen__image { max-width: 595px; margin-left: auto; }
+.first-screen__image { max-width: 595px; margin: 0 auto; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-items: flex-end; -ms-flex-align: end; align-items: flex-end; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; margin-bottom: -60px; }
 
 .first-screen__image_dark { display: none; }
 
@@ -427,7 +427,7 @@ h1, h2, h3, h4, h5, h6 { font-family: "Sansita One", sans-serif; }
 .feedback__form { margin-top: 70px; }
 
 @media only screen and (max-width: 1400px) { .first-screen { background-size: 1134px 565px; }
-  .first-screen__image { max-width: 490px; }
+  .first-screen__image { max-width: 320px; margin-bottom: 0; }
   .first-screen .title-section > br { display: none; }
   .about-company__image { width: 250px; height: 376px; }
   .about-company__text { max-width: 580px; }
@@ -435,6 +435,7 @@ h1, h2, h3, h4, h5, h6 { font-family: "Sansita One", sans-serif; }
 
 @media only screen and (max-width: 1199.8px) { .first-screen { height: 500px; background-size: contain; }
   .first-screen .scroll-to { display: none; }
+  .first-screen__image { margin-bottom: -30px; max-width: 260px; }
   .about-company__image { width: 225px; height: 338px; }
   .about-company__text { max-width: 510px; }
   .working-profitable .title-section { max-width: 575px; margin: 0 auto 50px; font-size: 52px; }
@@ -450,7 +451,7 @@ h1, h2, h3, h4, h5, h6 { font-family: "Sansita One", sans-serif; }
   .feedback { margin-bottom: 100px; } }
 
 @media only screen and (max-width: 991.8px) { .first-screen { height: 360px; }
-  .first-screen__image { max-width: 310px; }
+  .first-screen__image { max-width: 210px; }
   .about-company__image { width: 166px; height: 250px; }
   .about-company__text { max-width: 390px; }
   .about-company__text .title-section { margin-bottom: 22px; }
@@ -464,6 +465,7 @@ h1, h2, h3, h4, h5, h6 { font-family: "Sansita One", sans-serif; }
   .feedback { margin-bottom: 60px; } }
 
 @media only screen and (max-width: 767.8px) { .first-screen { height: 270px; }
+  .first-screen__image { max-width: 160px; }
   .about-company__image { width: 120px; height: auto; }
   .about-company__text { max-width: 310px; }
   .about-company__text .title-section { margin-bottom: 16px; }
@@ -477,7 +479,7 @@ h1, h2, h3, h4, h5, h6 { font-family: "Sansita One", sans-serif; }
 
 @media only screen and (max-width: 575.8px) { .first-screen { height: auto; background-size: cover; }
   .first-screen .title-section { max-width: 260px; margin: 30px auto 0; text-align: center !important; }
-  .first-screen__image { max-width: 290px; margin: 0 auto -20px; }
+  .first-screen__image { max-width: 180px; margin: 40px auto -20px; }
   .about-company { max-width: 290px; margin: 0 auto 50px; position: relative; display: block; }
   .about-company__image { width: 145px; height: auto; }
   .about-company__image_right { margin-left: auto; }

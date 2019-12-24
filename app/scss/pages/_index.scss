@@ -11,7 +11,11 @@
 	}
 	&__image {
 		max-width: 595px;
-		margin-left: auto;
+		margin: 0 auto;
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		margin-bottom: -60px;
 		&_dark {
 			display: none;
 		}
@@ -198,7 +202,8 @@
 	.first-screen {
 		background-size: 1134px 565px;
 		&__image {
-			max-width: 490px;
+			max-width: 320px;
+			margin-bottom: 0;
 		}
 		.title-section {
 			> br {
@@ -231,6 +236,10 @@
 		background-size: contain;
 		.scroll-to {
 			display: none;
+		}
+		&__image {
+			margin-bottom: -30px;
+			max-width: 260px;
 		}
 	}
 
@@ -296,7 +305,7 @@
 	.first-screen {
 		height: 360px;
 		&__image {
-			max-width: 310px;
+			max-width: 210px;
 		}
 	}
 
@@ -354,6 +363,9 @@
 @media only screen and (max-width: 767.8px) {
 	.first-screen {
 		height: 270px;
+		&__image {
+			max-width: 160px;
+		}
 	}
 
 	.about-company {
@@ -411,8 +423,8 @@
 			text-align: center !important;
 		}
 		&__image {
-			max-width: 290px;
-			margin: 0 auto -20px;
+			max-width: 180px;
+			margin: 40px auto -20px;
 		}
 	}
 
