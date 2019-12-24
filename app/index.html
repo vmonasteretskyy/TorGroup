@@ -14,6 +14,7 @@
 	<!-- style -->
 	<link rel="stylesheet" type="text/css" href="css/components/bootstrap-reboot.min.css">
 	<link rel="stylesheet" type="text/css" href="css/components/bootstrap-grid.min.css">
+	<link rel="stylesheet" type="text/css" href="css/components/animate.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 
@@ -85,14 +86,14 @@
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-12 col-sm-6">
-						<h1 class="title-section text-left">
+						<h1 class="title-section text-left wow fadeInLeft">
 							One of the<br>
 							leaders of<br>
 							B2B distribution
 						</h1>
 					</div>
 					<div class="col-12 col-sm-6">
-						<div class="first-screen__image">
+						<div class="first-screen__image wow fadeInRight">
 							<img src="images/phone-dark.png" alt="" class="first-screen__image_dark">
 							<img src="images/phone-light.png" alt="" class="first-screen__image_light">
 						</div>
@@ -121,12 +122,13 @@
 		</section>
 
 		<section id="aboutCompany" class="section about-company">
-			<div class="about-company__image about-company__image_left">
+			<div class="about-company__image about-company__image_left wow fadeInLeft">
 				<img src="images/image-left.png" alt="">
 			</div>
 			<div class="about-company__text">
-				<h2 class="title-section">About company</h2>
-				<p>The creation and development of Absolut Group is inextricably linked with the spread of cellular
+				<h2 class="title-section wow fadeInUp">About company</h2>
+				<p class="wow fadeInUp" data-wow-delay="0.5s">The creation and development of Absolut Group is
+					inextricably linked with the spread of cellular
 					communications in our country. Its history begins in 1998, it was at that time that its own retail
 					chain
 					of stores selling mobile phones NMT, GSM was created, and services for their connection were also
@@ -134,17 +136,17 @@
 					reputation. The Absolut Group's field of activity also includes such areas as financial management,
 					logistics, information support.</p>
 			</div>
-			<div class="about-company__image about-company__image_right">
+			<div class="about-company__image about-company__image_right wow fadeInRight">
 				<img src="images/image-right.png" alt="">
 			</div>
 		</section>
 
 		<section id="productRange" class="section working-profitable">
 			<div class="container">
-				<h2 class="title-section">Why is working with us profitable?</h2>
+				<h2 class="title-section wow fadeInUp">Why is working with us profitable?</h2>
 				<div class="row justify-content-center">
 					<div class="col-12 col-md-10">
-						<div class="working-profitable__content">
+						<div class="working-profitable__content wow fadeInUp" data-wow-delay="0.6s">
 							<div class="working-profitable__item">
 								<img src="images/icons/icon-1.svg" alt="" class="working-profitable__icon">
 								<div class="working-profitable__text">
@@ -217,7 +219,7 @@
 
 		<section id="manufacturers" class="section manufacturers">
 			<div class="container">
-				<h2 class="title-section">Manufacturers</h2>
+				<h2 class="title-section wow fadeInUp">Manufacturers</h2>
 				<div class="manufacturers__content">
 					<div class="manufacturers__icon">
 						<img src="images/manufacturers/asus.png" alt="">
@@ -244,15 +246,15 @@
 						<img src="images/manufacturers/samsung.png" alt="">
 					</div>
 				</div>
-				<a href="#" class="manufacturers__link">show all</a>
+				<button type="button" id="showAllManufacturers" class="manufacturers__link">show all</button>
 			</div>
 		</section>
 
 		<section id="whyAreWe" class="section want-get d-flex align-items-center">
-			<div class="want-get__image">
+			<div class="want-get__image wow fadeInLeft">
 				<img src="images/image-girl.png" alt="">
 			</div>
-			<div class="want-get__info">
+			<div class="want-get__info wow fadeInRight">
 				<h3 class="want-get__title">Want to get current prices?</h3>
 				<a href="#" class="btn btn-blue want-get__btn">go over</a>
 			</div>
@@ -260,36 +262,29 @@
 
 		<section id="feedback" class="feedback">
 			<div class="container">
-				<h2 class="title-section">Feedback</h2>
-				<form class="form feedback__form" method="post" autocomplete="off">
+				<h2 class="title-section wow fadeInUp">Feedback</h2>
+				<form class="form feedback__form wow fadeInUp" method="post" autocomplete="off" data-wow-delay="0.4s">
 					<span class="form__error">Fill in all fields to continue</span>
 					<div class="form__body">
 						<div class="form__col">
 							<div class="form-group">
 								<label for="fullName">full name</label>
-								<input id="fullName" type="text" class="input-style success">
+								<input id="fullName" type="text" class="input-style success" autocomplete="none">
 								<span></span>
 							</div>
 							<div class="form-group">
 								<label for="companyName">company name</label>
-								<input id="companyName" type="text" class="input-style warning">
+								<input id="companyName" type="text" class="input-style warning" autocomplete="none">
 								<span></span>
 							</div>
 							<div class="form-group">
 								<label for="">mobile phone</label>
-								<div class="input-group">
-									<select name="" id="" class="select">
-										<option value="+38">Ukraine</option>
-										<option value="+38">Ukraine</option>
-										<option value="+38">Ukraine</option>
-									</select>
-									<input type="text" id="phone" class="input-style">
-									<span></span>
-								</div>
+								<input type="text" id="phone" class="input-style" autocomplete="none">
+								<span></span>
 							</div>
 							<div class="form-group">
 								<label for="email">mail</label>
-								<input id="email" type="email" class="input-style">
+								<input id="email" type="email" class="input-style" autocomplete="none">
 								<span></span>
 							</div>
 						</div>
@@ -331,6 +326,7 @@
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery-migrate-1.4.1.min.js"></script>
 	<script src="js/components/slick.min.js"></script>
+	<script src="js/components/wow.min.js"></script>
 	<script src="js/components/jquery.maskedinput.min.js"></script>
 	<script src="js/custom.js"></script>
 </body>

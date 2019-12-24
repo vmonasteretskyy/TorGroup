@@ -53,15 +53,25 @@ $(document).ready(function() {
 	// slider
 	$(".slider").slick({
 		arrows: false,
-		infinite: false,
-		speed: 300,
+		infinite: true,
 		slidesToShow: 2,
 		slidesToScroll: 1,
+		centerMode: true,
+		centerPadding: "14%",
+		autoplay: true,
+		autoplaySpeed: 2500,
 		responsive: [
+			{
+				breakpoint: 992,
+				settings: {
+					centerPadding: "10%"
+				}
+			},
 			{
 				breakpoint: 480,
 				settings: {
-					slidesToShow: 1
+					slidesToShow: 1,
+					centerPadding: "40px"
 				}
 			}
 		]
@@ -77,4 +87,16 @@ $(document).ready(function() {
 			1000
 		);
 	});
+
+	// added more images on section manufacturers
+	$("#showAllManufacturers").click(function() {
+		$(".manufacturers__content").append(
+			'<div class="manufacturers__icon"><img src="images/manufacturers/google.png" alt=""></div><div class="manufacturers__icon"><img src="images/manufacturers/doogee.png" alt=""></div><div class="manufacturers__icon"><img src="images/manufacturers/sigma.png" alt=""></div>'
+		);
+	});
+
+	// initialization WOW animation on page
+	new WOW().init();
+
+	$("#phone").mask("+38(999) 999-99-99");
 });

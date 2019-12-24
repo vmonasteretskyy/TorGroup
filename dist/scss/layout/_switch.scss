@@ -43,6 +43,7 @@
 		@include radius(inherit);
 		z-index: 1;
 		@include transition(background 0.3s);
+		cursor: pointer;
 		&::before {
 			content: "day";
 			position: absolute;

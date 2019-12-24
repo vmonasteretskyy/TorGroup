@@ -61,30 +61,6 @@
 	font-size: $base-fs - 4px;
 }
 
-.input-group {
-	position: relative;
-	@extend %input-style;
-	display: flex;
-	height: 30px;
-	.input-style {
-		border: none;
-		height: 28px;
-	}
-	.select {
-		background: transparent;
-		color: var(--color-input);
-		min-width: 86px;
-		border: none;
-	}
-	&::before {
-		content: "";
-		position: absolute;
-		top: 6px;
-		left: 88px;
-		border-left: 1px solid var(--color-input);
-		height: 18px;
-	}
-}
 .input-style,
 .textarea-style {
 	@extend %input-style;
