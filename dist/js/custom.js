@@ -31,16 +31,14 @@ $(document).ready(function() {
 		}
 	}
 
-	// scroll to section
-	let scrollLink = $(".scroll-down");
-	scrollLink.click(function(e) {
-		e.preventDefault();
-		$("body,html").animate(
-			{
-				scrollTop: $(".scroll-to").offset().top
-			},
-			1000
-		);
+	// fixed menu
+	$(window).scroll(function() {
+		const currentPosition = $(window).scrollTop();
+		if (currentPosition >= 1) {
+			$(".header").addClass("shadow");
+		} else {
+			$(".header").removeClass("shadow");
+		}
 	});
 
 	// open menu on mobile screen
@@ -48,6 +46,14 @@ $(document).ready(function() {
 		$(this).toggleClass("active");
 		$(".menu").toggleClass("open");
 		$(".dropdown-menu").slideUp();
+	});
+
+	$(".first-screen__slider").slick({
+		arrows: false,
+		slidesToShow: 1,
+		fade: true,
+		autoplay: true,
+		autoplaySpeed: 2000
 	});
 
 	// slider
@@ -82,7 +88,7 @@ $(document).ready(function() {
 		e.preventDefault();
 		$("body,html").animate(
 			{
-				scrollTop: $(this.hash).offset().top - 40
+				scrollTop: $(this.hash).offset().top - 100
 			},
 			1000
 		);

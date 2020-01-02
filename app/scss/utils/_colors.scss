@@ -1,4 +1,6 @@
 :root {
+	--color-primary: #01adee;
+
 	--color-font: #393939;
 	--color-font-light: rgba(57, 57, 57, 0.7);
 
@@ -23,6 +25,8 @@
 }
 
 [data-theme="dark"] {
+	--color-primary: #01adee;
+
 	--color-font: #b4b4b4;
 	--color-font-light: #f7f7f7;
 
@@ -38,7 +42,7 @@
 	--color-header-font: #959595;
 	--color-header-font-hover: #fff;
 
-	--color-switch-bg: #2b5560;
+	--color-switch-bg: #2d398a;
 	--color-switch-bg-second: #b0bec5;
 	--color-switch-border: #717171;
 

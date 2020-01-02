@@ -9,18 +9,22 @@
 	.row {
 		height: inherit;
 	}
-	&__image {
+	&__slider {
 		max-width: 595px;
-		margin: 0 auto;
-		display: flex;
-		align-items: flex-end;
-		justify-content: center;
-		margin-bottom: -60px;
-		&_dark {
-			display: none;
+		margin: 0 auto -60px;
+		.slick-track {
+			display: flex;
+			align-items: center;
 		}
 	}
+	&__image {
+		display: flex !important;
+		align-items: center;
+		justify-content: center;
+	}
 	.title-section {
+		font-family: "Prompt", sans-serif;
+		font-weight: 600;
 		color: $title-blue;
 	}
 	.scroll-to {
@@ -57,14 +61,6 @@
 [data-theme="dark"] {
 	.first-screen {
 		background-image: url(../images/bg-first-screen-dark.png);
-		&__image {
-			&_dark {
-				display: block;
-			}
-			&_light {
-				display: none;
-			}
-		}
 	}
 	.title-section {
 		color: $title-white;
@@ -115,7 +111,10 @@
 	}
 	&__icon {
 		width: 105px;
+		height: 105px;
+		background-color: var(--color-primary);
 		margin-right: 16px;
+		@include radius(50%);
 	}
 	&__text {
 		font-size: $base-fs - 2px;
@@ -201,7 +200,7 @@
 @media only screen and (max-width: 1400px) {
 	.first-screen {
 		background-size: 1134px 565px;
-		&__image {
+		&__slider {
 			max-width: 320px;
 			margin-bottom: 0;
 		}
@@ -237,7 +236,7 @@
 		.scroll-to {
 			display: none;
 		}
-		&__image {
+		&__slider {
 			margin-bottom: -30px;
 			max-width: 260px;
 		}
@@ -264,6 +263,7 @@
 		}
 		&__icon {
 			width: 75px;
+			height: 75px;
 		}
 		&__text {
 			font-size: $base-fs - 4px;
@@ -304,7 +304,7 @@
 @media only screen and (max-width: 991.8px) {
 	.first-screen {
 		height: 360px;
-		&__image {
+		&__slider {
 			max-width: 210px;
 		}
 	}
@@ -332,6 +332,7 @@
 		}
 		&__icon {
 			width: 85px;
+			height: 85px;
 		}
 		.slider {
 			margin-top: 80px;
@@ -363,7 +364,7 @@
 @media only screen and (max-width: 767.8px) {
 	.first-screen {
 		height: 270px;
-		&__image {
+		&__slider {
 			max-width: 160px;
 		}
 	}
@@ -387,6 +388,7 @@
 		}
 		&__icon {
 			width: 65px;
+			height: 65px;
 		}
 	}
 
@@ -422,7 +424,7 @@
 			margin: 30px auto 0;
 			text-align: center !important;
 		}
-		&__image {
+		&__slider {
 			max-width: 180px;
 			margin: 40px auto -20px;
 		}

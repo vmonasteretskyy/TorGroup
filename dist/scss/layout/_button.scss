@@ -10,7 +10,7 @@
 }
 
 .btn-blue {
-	background-color: $btn-blue;
+	background-color: var(--color-primary);
 	color: $text-white;
 	&:hover {
 		color: $text-white;
@@ -20,13 +20,13 @@
 
 .btn-border-blue {
 	position: relative;
-	border: 1.5px solid $btn-blue;
+	border: 1.5px solid var(--color-primary);
 	color: $text-blue;
 	&::before {
 		content: "";
 		width: 0;
 		height: inherit;
-		background-color: $btn-blue;
+		background-color: var(--color-primary);
 		position: absolute;
 		top: 0;
 		right: 0;
