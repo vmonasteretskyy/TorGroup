@@ -333,7 +333,7 @@ h1, h2, h3, h4, h5, h6 { font-family: "Sansita One", sans-serif; }
 
 .footer__content { font-size: 16px; font-weight: 500; margin-bottom: 30px; }
 
-.footer__content .social-link { position: relative; margin-top: 38px; opacity: 0.8; }
+.footer__content .social-link { position: relative; margin-top: 38px; opacity: 0.7; }
 
 .footer__content .social-link::before { content: ""; width: 710px; height: 1.5px; background-color: #242424; position: absolute; top: -14px; left: 50%; transform: translateX(-50%); -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); }
 
@@ -344,6 +344,12 @@ h1, h2, h3, h4, h5, h6 { font-family: "Sansita One", sans-serif; }
 [data-theme="dark"] .footer__content .social-link { opacity: 1; }
 
 @media only screen and (max-width: 1199.8px) { .footer { font-size: 12px; } }
+
+@media only screen and (max-width: 767.8px) { .footer { font-size: 13px; }
+  .footer__logo { width: 120px; }
+  .footer__content { font-size: 15px; }
+  .footer__content .social-link::before { width: 100%; left: 0; transform: translateX(0); -webkit-transform: translateX(0); -moz-transform: translateX(0); -ms-transform: translateX(0); -o-transform: translateX(0); }
+  .footer__content .social-link a { width: 26px; } }
 
 .first-screen { position: relative; height: calc(100vh - 90px); background-image: url(../images/bg-first-screen-light.png); background-repeat: no-repeat; background-position: top right; background-size: 1285px 716px; }
 
