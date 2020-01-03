@@ -108,9 +108,9 @@ h1, h2, h3, h4, h5, h6 { font-family: "Sansita One", sans-serif; }
 
 @media only screen and (min-width: 1401px) { .container { max-width: 1320px; } }
 
-.header { position: fixed; top: 0; left: 0; right: 0; padding: 30px 0; z-index: 100; background-color: var(--color-bg); }
+.header { position: fixed; top: 0; left: 0; right: 0; padding: 30px 0; z-index: 100; }
 
-.header.shadow { box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); }
+.header.shadow { background-color: var(--color-bg); transition: background-color 0.3s; -webkit-transition: background-color 0.3s; -moz-transition: background-color 0.3s; -ms-transition: background-color 0.3s; -o-transition: background-color 0.3s; box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); }
 
 .header .logo { width: 100%; display: block; }
 
@@ -333,7 +333,7 @@ h1, h2, h3, h4, h5, h6 { font-family: "Sansita One", sans-serif; }
 
 .footer__content { font-size: 16px; font-weight: 500; margin-bottom: 30px; }
 
-.footer__content .social-link { position: relative; margin-top: 38px; opacity: 0.8; }
+.footer__content .social-link { position: relative; margin-top: 38px; opacity: 0.7; }
 
 .footer__content .social-link::before { content: ""; width: 710px; height: 1.5px; background-color: #242424; position: absolute; top: -14px; left: 50%; transform: translateX(-50%); -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); }
 
@@ -344,6 +344,12 @@ h1, h2, h3, h4, h5, h6 { font-family: "Sansita One", sans-serif; }
 [data-theme="dark"] .footer__content .social-link { opacity: 1; }
 
 @media only screen and (max-width: 1199.8px) { .footer { font-size: 12px; } }
+
+@media only screen and (max-width: 767.8px) { .footer { font-size: 13px; }
+  .footer__logo { width: 120px; }
+  .footer__content { font-size: 15px; }
+  .footer__content .social-link::before { width: 100%; left: 0; transform: translateX(0); -webkit-transform: translateX(0); -moz-transform: translateX(0); -ms-transform: translateX(0); -o-transform: translateX(0); }
+  .footer__content .social-link a { width: 26px; } }
 
 .first-screen { position: relative; height: calc(100vh - 90px); background-image: url(../images/bg-first-screen-light.png); background-repeat: no-repeat; background-position: top right; background-size: 1285px 716px; }
 
@@ -396,8 +402,6 @@ h1, h2, h3, h4, h5, h6 { font-family: "Sansita One", sans-serif; }
     -o-transform: translateY(0); } }
 
 [data-theme="dark"] .first-screen { background-image: url(../images/bg-first-screen-dark.png); }
-
-[data-theme="dark"] .title-section { color: #fff; }
 
 .about-company { position: relative; text-align: center; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; }
 

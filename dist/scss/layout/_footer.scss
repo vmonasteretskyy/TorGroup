@@ -17,7 +17,7 @@
 		.social-link {
 			position: relative;
 			margin-top: 38px;
-			opacity: 0.8;
+			opacity: 0.7;
 			&::before {
 				content: "";
 				width: 710px;
@@ -53,5 +53,27 @@
 @media only screen and (max-width: 1199.8px) {
 	.footer {
 		font-size: $base-fs - 6px;
+	}
+}
+
+@media only screen and (max-width: 767.8px) {
+	.footer {
+		font-size: $base-fs - 5px;
+		&__logo {
+			width: 120px;
+		}
+		&__content {
+			font-size: $base-fs - 3px;
+			.social-link {
+				&::before {
+					width: 100%;
+					left: 0;
+					@include transform(translateX(0));
+				}
+				a {
+					width: 26px;
+				}
+			}
+		}
 	}
 }
